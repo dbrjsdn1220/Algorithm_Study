@@ -1,3 +1,5 @@
-K = 1
-temp = K**2 + (K-1)**2
-print(temp)
+test = [1, 2]
+sett = set()
+[sett.add(i) for i in test]
+
+print(sett)
