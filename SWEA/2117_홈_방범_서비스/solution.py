@@ -1,6 +1,3 @@
-import sys
-sys.stdin = open('input.txt')
-
 """
 해당 문제를 그리디로 풀려면 어떻게 해야 하나?
 특정 위치가 최적의 해인지 구하는 것은 매우 복작하고 불가능에 가까워 보임.
@@ -12,6 +9,9 @@ sys.stdin = open('input.txt')
 -> 필자는 그렇다고 생각하므로 이 로직으로 알고리즘을 풀어보려 함.
 -> 큰 범위부터 내려가면서 탐색하다 특정 범위에서 제공이 가능해진다면, 해당 범위에서 가장 많은 집을 제공해주는 부분이 정답.
 """
+import sys
+sys.stdin = open('input.txt')
+
 
 T = int(input())
 for tc in range(1, T+1):
@@ -67,5 +67,3 @@ for tc in range(1, T+1):
             break
 
     print(f"#{tc} {answer}")
-
-
