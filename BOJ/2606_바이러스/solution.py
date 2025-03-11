@@ -10,7 +10,7 @@ sys.stdin = open('input.txt')
 def dfs(idx):
     answer.append(idx)
 
-    for i in graph[idx]:
+    for i in indegree[idx]:
         if i not in answer:
             dfs(i)
 
