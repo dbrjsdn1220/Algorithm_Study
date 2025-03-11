@@ -13,7 +13,7 @@ A < B 형태로 주어지니까 B 학생의 차수를 +1,
 """
 from collections import deque
 import sys
-input = sys.stdin.readline
+sys.stdin = open('input.txt')
 
 
 # N, M: 학생 수, 비교 수
@@ -33,6 +33,9 @@ que = deque()
 for i in range(1, N+1):
     if indegree[i] == 0:
         que.append(i)
+
+print(graph)
+print(indegree)
 
 # 차수가 0인 애들 출력
 while que:
