@@ -65,11 +65,9 @@ for tc in range(1, T+1):
     this_rank = [[] for _ in range(N+1)]
     # 우선순위 순서대로 그래프 만들기
     for i in range(1, N+1):
-        if indegree[i] > N+1 or 1 > indegree[i]:
-            print("IMPOSSIBLE")
-            break
-
         this_rank[indegree[i]].append(i)
+
+    print(this_rank)
 
     # 정상적인 그래프라면 모든 위치에서 한 개씩 연결됨.
     if [] not in this_rank[1:]:
